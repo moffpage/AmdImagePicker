@@ -1,0 +1,59 @@
+[versions]
+
+compose = "1.6.11"
+
+essenty = "2.1.0"
+decompose = "3.1.0"
+
+kotlin = "2.0.0"
+kotlinx-serialization = "1.7.1"
+
+peekaboo = "0.5.2"
+
+android-gradle = "8.5.2"
+androidx-activity = "1.9.1"
+kotlin-version = "2.0.0"
+core-ktx = "1.13.1"
+
+[plugins]
+android-library = { id = "com.android.library", version.ref = "android-gradle" }
+android-application = { id = "com.android.application", version.ref = "android-gradle" }
+
+compose = { id = "org.jetbrains.compose", version.ref = "compose" }
+compose-kotlin = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+
+multiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
+
+kotlinx-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
+jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin-version" }
+
+[libraries]
+android-activity-compose = { module = "androidx.activity:activity-compose", version.ref = "androidx-activity" }
+
+compose-ui = { group = "org.jetbrains.compose.ui", name = "ui", version.ref = "compose" }
+compose-runtime = { module = "org.jetbrains.compose.runtime:runtime", version.ref = "compose" }
+compose-material2 = { module = "org.jetbrains.compose.material:material", version.ref = "compose" }
+compose-foundation = { module = "org.jetbrains.compose.foundation:foundation", version.ref = "compose" }
+
+essenty-lifecycle = { group = "com.arkivanov.essenty", name = "lifecycle", version.ref = "essenty" }
+
+decompose-core = { group = "com.arkivanov.decompose", name = "decompose", version.ref = "decompose" }
+decompose-extensions-compose = { group = "com.arkivanov.decompose", name = "extensions-compose", version.ref = "decompose" }
+
+peekaboo-ui = { group = "io.github.onseok", name = "peekaboo-ui", version.ref = "peekaboo" }
+peekaboo-imagepicker = { group = "io.github.onseok", name = "peekaboo-image-picker", version.ref = "peekaboo" }
+core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "core-ktx" }
+
+[bundles]
+
+compose = [
+    "compose-ui",
+    "compose-runtime",
+    "compose-foundation",
+    "compose-material2",
+]
+
+decompose = [
+    "decompose-core",
+    "decompose-extensions-compose",
+]
